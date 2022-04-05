@@ -63,8 +63,15 @@ socketIO.on('connection', function (client) {
   })
 })
 
-var port = process.env.PORT || 3000;
-httpServer.listen(port, function (err) {
+// var port = process.env.PORT || 3000;
+// httpServer.listen(port, function (err) {
+//   if (err) console.log(err);
+//   console.log('Listening on port', port);
+// });
+
+var port = process.env.PORT;
+
+server.listen(port, function (err) {
   if (err) console.log(err);
   console.log('Listening on port', port);
 });
