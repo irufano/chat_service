@@ -34,13 +34,13 @@
 // // http.listen(3000);
 // http.listen(process.env.PORT)
 
-const app = require("express")();
-const httpServer = require('http').createServer(app)
+// const app = require("express")();
+const httpServer = require('http').createServer()
 const socketIO = require('socket.io')(httpServer)
 
-app.get("/", (req, res) => {
-  res.send("Chat service is running...");
-});
+// app.get("/", (req, res) => {
+//   res.send("Chat service is running...");
+// });
 
 socketIO.on('connection', function (client) {
   console.log('Connected...', client.id);
